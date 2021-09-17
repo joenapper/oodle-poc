@@ -10,9 +10,34 @@ export default function Layout({ title, keywords, description, children }) {
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
       </Head>
-      <Header />
+      <Header>Header to be continued..</Header>
+
       <main>{children}</main>
-      <Footer />
+      
+      <Footer>
+        <p>
+          Proudly published with &nbsp;
+          <a
+            href="https://prismic.io"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Prismic
+          </a>
+          <br />
+          <a
+            href="https://prismic.io"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className="footer-logo"
+              src="/images/logo-prismic.svg"
+              alt="Gray Prismic logo"
+            />
+          </a>
+        </p>
+      </Footer>
     </div>
   );
 }

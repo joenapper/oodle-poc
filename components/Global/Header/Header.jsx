@@ -1,9 +1,14 @@
+import PropTypes from "prop-types"
 import styled from "styled-components";
 
-const Header = () => {
+Header.propTypes = {
+  children: PropTypes.node
+}
+
+export default function Header({ children = null }) {
   return (
     <StyledHeader>
-      <p>Header to be continued..</p>
+      <p>{children}</p>
     </StyledHeader>
   )
 }
@@ -17,5 +22,3 @@ const StyledHeader = styled.header`
   font-style: italic;
   text-align: center;
 `
-
-export default Header

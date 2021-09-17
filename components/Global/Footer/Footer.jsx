@@ -1,31 +1,17 @@
+import PropTypes from "prop-types"
 import styled from "styled-components";
 
-const Footer = () => (
-  <StyledFooter>
-    <p>
-      Proudly published with &nbsp;
-      <a
-        href="https://prismic.io"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Prismic
-      </a>
-      <br />
-      <a
-        href="https://prismic.io"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          className="footer-logo"
-          src="/images/logo-prismic.svg"
-          alt="Gray Prismic logo"
-        />
-      </a>
-    </p>
-  </StyledFooter>
-)
+Footer.propTypes = {
+  children: PropTypes.node
+}
+
+export default function Footer({ children = null }) {
+  return (
+    <StyledFooter>
+      {children}
+    </StyledFooter>
+  )
+}
 
 const StyledFooter = styled.footer`
   max-width: 700px;
@@ -51,5 +37,3 @@ const StyledFooter = styled.footer`
     margin-top: 10px;
   }
 `;
-
-export default Footer
