@@ -1,19 +1,51 @@
-# Prismic & Next.js Example Blog
-> [Next.js](https://nextjs.org/) example blog project with content managed in [Prismic](https://prismic.io)
+# Oodle Proof of Concept Site
+> [Live preview - not available yet](https://nextjs.org/)
 
-## Check out the dedicated article to get this project up and running
-> [Prismic project guide](https://intercom.help/prismicio/en/articles/2882569-sample-blog-with-api-based-cms-in-next-js)
+## Tech Stack
+> [Prismic - CMS](https://prismic.io/)
+> [Next JS - React Framework](https://nextjs.org/)
+> [Styled Components - Styling](https://https://styled-components.com/.org/)
+> [Storybook - UI Library](https://storybook.js.org/)
+> [Jest - Testing Library](https://jestjs.io/)
+> [Vercel - Hosting](https://vercel.com/)
 
-## Learn more about using Prismic with Next
+## Setup
+First, install dependencies:
 
-[Prismic + Next documentation](https://prismic.io/docs/technologies/getting-started-nextjs).
+```bash
+npm install
+# or
+yarn add
+```
 
-## License
+Then, run the development server:
 
-This software is licensed under the Apache 2 license, quoted below.
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-Copyright 2021 [Prismic](https://prismic.io).
+To run the Storybook component library, use:
 
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this project except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
+```bash
+npm run storybook
+# or
+yarn storybook
+```
 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+To run the tests one time, use:
+
+```bash
+npm run test
+# or
+yarn test
+```
+
+To keep the tests running while you work, use:
+
+```bash
+npm run test:watch
+# or
+yarn test:watch
+```
