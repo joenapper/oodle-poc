@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Footer = () => (
-  <Footer>
+  <StyledFooter>
     <p>
       Proudly published with &nbsp;
       <a
@@ -24,10 +24,10 @@ const Footer = () => (
         />
       </a>
     </p>
-  </Footer>
+  </StyledFooter>
 )
 
-const Footer = styled.footer`
+const StyledFooter = styled.footer`
   max-width: 700px;
   margin: 0 auto;
   color: #9a9a9a;

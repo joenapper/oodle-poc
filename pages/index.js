@@ -1,24 +1,21 @@
-import Head from "next/head";
 import Prismic from '@prismicio/client'
 import { RichText } from "prismic-reactjs";
-import Header from "../components/Global/Header"
+import Layout from "../components/Global/Layout"
+import User from "../components/home/User"
 import PostList from "../components/home/PostList"
 import { Client } from "utils/prismicHelpers";
 
 export default function HomePage({ doc, posts }) {
   if (doc && doc.data) {
     return (
-      <>
-        <Head>
-          <title>{RichText.asText(doc.data.headline)}</title>
-        </Head>
-        <Header
+      <Layout>
+        <User
           image={doc.data.image}
           headline={doc.data.headline}
           description={doc.data.description}
         />
         <PostList posts={posts} />
-      </>
+      </Layout>
     );
   }
 };

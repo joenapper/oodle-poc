@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { RichText } from "prismic-reactjs";
 import { queryRepeatableDocuments } from 'utils/queries'
+import Layout from "../../components/Global/Layout"
 import BackButton from "../../components/post/BackButton";
 import SliceZone from "../../components/post/SliceZone";
 import { Client } from "utils/prismicHelpers";
@@ -11,7 +12,7 @@ export default function PostPage({ post }) {
     const title = hasTitle ? RichText.asText(post.data.title) : "Untitled";
 
     return (
-      <>
+      <Layout>
         <Head>
           <title>{title}</title>
         </Head>
@@ -22,7 +23,7 @@ export default function PostPage({ post }) {
           </div>
           <SliceZone sliceZone={post.data.body} />
         </div>
-      </>
+      </Layout>
     );
   }
 
