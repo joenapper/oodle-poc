@@ -1,10 +1,10 @@
 import Head from "next/head";
 import { RichText } from "prismic-reactjs";
-import { queryRepeatableDocuments } from 'utils/queries'
-import Layout from "../../components/Global/Layout"
-import BackButton from "../../components/post/BackButton";
-import SliceZone from "../../components/post/SliceZone";
-import { Client } from "utils/prismicHelpers";
+import Layout from "@/components/Global/Layout"
+import BackButton from "@/components/post/BackButton";
+import SliceZone from "@/components/post/SliceZone";
+import { queryRepeatableDocuments } from '@/utils/queries'
+import { Client } from "@/utils/prismicHelpers";
 
 export default function PostPage({ post }) {
   if (post && post.data) {

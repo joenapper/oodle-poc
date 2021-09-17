@@ -1,9 +1,9 @@
 import Prismic from '@prismicio/client'
 import { RichText } from "prismic-reactjs";
-import Layout from "../components/Global/Layout"
-import User from "../components/home/User"
-import PostList from "../components/home/PostList"
-import { Client } from "utils/prismicHelpers";
+import Layout from "@/components/Global/Layout"
+import User from "@/components/home/User"
+import PostList from "@/components/home/PostList"
+import { Client } from "@/utils/prismicHelpers";
 
 export default function HomePage({ doc, posts }) {
   if (doc && doc.data) {
