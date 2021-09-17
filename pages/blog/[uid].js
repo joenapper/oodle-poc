@@ -1,41 +1,28 @@
-import React from "react";
 import Head from "next/head";
 import { RichText } from "prismic-reactjs";
-
 import { queryRepeatableDocuments } from 'utils/queries'
-
-// Project components
-import DefaultLayout from "layouts";
-import { BackButton, SliceZone } from "components/post";
-
-// Project functions & styles
+import BackButton from "../../components/post/BackButton";
+import SliceZone from "../../components/post/SliceZone";
 import { Client } from "utils/prismicHelpers";
-import { postStyles } from "styles";
 
-/**
- * Post page component
- */
-const Post = ({ post }) => {
+export default function PostPage({ post }) {
   if (post && post.data) {
     const hasTitle = RichText.asText(post.data.title).length !== 0;
     const title = hasTitle ? RichText.asText(post.data.title) : "Untitled";
 
     return (
-      <DefaultLayout>
+      <>
         <Head>
           <title>{title}</title>
         </Head>
-        <div className="main">
-          <div className="outer-container">
+        <div>
+          <div>
             <BackButton />
             <h1>{title}</h1>
           </div>
           <SliceZone sliceZone={post.data.body} />
         </div>
-        <style jsx global>
-          {postStyles}
-        </style>
-      </DefaultLayout>
+      </>
     );
   }
 
@@ -60,5 +47,3 @@ export async function getStaticPaths() {
     fallback: true,
   }
 }
-
-export default Post;

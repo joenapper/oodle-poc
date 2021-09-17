@@ -1,9 +1,5 @@
-import React from 'react'
 import Caption from './Caption'
 
-/**
- * Full width image component
- */
 const FullWidthImage = ({ slice }) => {
   const imageUrl = slice.primary.image.url
   const caption = slice.primary.caption

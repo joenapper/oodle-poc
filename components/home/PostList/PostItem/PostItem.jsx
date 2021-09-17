@@ -1,27 +1,23 @@
-import React from 'react'
-import { default as NextLink } from 'next/link'
+import Link from 'next/link'
 import { RichText } from 'prismic-reactjs'
-
-import PostDate from './PostDate'
-import FirstParagraph from './FirstParagraph'
+import styled from 'styled-components'
+import PostDate from '../PostDate'
+import FirstParagraph from '../FirstParagraph'
 import { hrefResolver, linkResolver } from 'prismic-configuration'
 
-/**
- * Post list item component
- */
 const PostItem = ({ post }) => {
   const title = RichText.asText(post.data.title) ? RichText.asText(post.data.title) : 'Untitled'
   
   return (
-    <div className="blog-post">
-      <NextLink
+    <Item className="blog-post">
+      <Link
         as={linkResolver(post)}
         href={hrefResolver(post)}
       >
         <a>
           <h2>{title}</h2>
         </a>
-      </NextLink>
+      </Link>
 
       <PostDate date={post.data.date} />
       
@@ -29,8 +25,12 @@ const PostItem = ({ post }) => {
         sliceZone={post.data.body}
         textLimit={300}
       />
-    </div>
+    </Item>
   )
 }
+
+const Item = styled.div`
+  margin-bottom: 3rem;
+`
 
 export default PostItem

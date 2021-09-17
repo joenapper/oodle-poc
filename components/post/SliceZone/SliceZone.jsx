@@ -1,9 +1,5 @@
-import React from 'react'
-import { Text, Quote, ImageWithCaption } from './slices'
+import { Text, Quote, ImageWithCaption } from '../slices'
 
-/**
- * Post slice zone component
- */
 const SliceZone = ({ sliceZone }) => (
   sliceZone.map((slice, index) => {
     switch (slice.slice_type) {

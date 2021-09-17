@@ -1,9 +1,6 @@
-import React from 'react'
 import { Date } from 'prismic-reactjs'
+import styled from 'styled-components'
 
-/**
- * Post list item date component
- */
 const PostDate = ({ date }) => {
   // Format the date to M d, Y
   const dateFormat = {
@@ -14,10 +11,22 @@ const PostDate = ({ date }) => {
   const displayDate = new Intl.DateTimeFormat('en-US', dateFormat).format(Date(date))
 
   return (
-    <p className="blog-post-meta">
+    <StyledDate>
       <time className="created-at">{displayDate}</time>
-    </p>
+    </StyledDate>
   )
 }
+
+const StyledDate = styled.p`
+  color: #9a9a9a;
+  font-family: "Lato", sans-serif;
+  margin-bottom: 8px;
+
+  @media (max-width: 767px) {
+    .blog-post-meta {
+      font-size: 16px;
+    }
+  }
+`
 
 export default PostDate

@@ -1,20 +1,14 @@
-import React from "react";
 import Head from "next/head";
 import Prismic from '@prismicio/client'
 import { RichText } from "prismic-reactjs";
-
-// Project components & functions
-import DefaultLayout from "layouts";
-import { Header, PostList, SetupRepo } from "components/home";
+import Header from "../components/Global/Header"
+import PostList from "../components/home/PostList"
 import { Client } from "utils/prismicHelpers";
 
-/**
- * Homepage component
- */
-const Home = ({ doc, posts }) => {
+export default function HomePage({ doc, posts }) {
   if (doc && doc.data) {
     return (
-      <DefaultLayout>
+      <>
         <Head>
           <title>{RichText.asText(doc.data.headline)}</title>
         </Head>
@@ -24,12 +18,9 @@ const Home = ({ doc, posts }) => {
           description={doc.data.description}
         />
         <PostList posts={posts} />
-      </DefaultLayout>
+      </>
     );
   }
-
-  // Message when repository has not been setup yet
-  return <SetupRepo />;
 };
 
 export async function getStaticProps({ preview = null, previewData = {} }) {
@@ -55,5 +46,3 @@ export async function getStaticProps({ preview = null, previewData = {} }) {
     }
   }
 }
-
-export default Home;

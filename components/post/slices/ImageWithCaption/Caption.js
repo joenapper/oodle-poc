@@ -1,9 +1,5 @@
-import React from 'react'
 import { RichText } from 'prismic-reactjs'
 
-/**
- * Image caption component
- */
 const Caption = ({ caption }) => {
   if (RichText.asText(caption) !== '') {
     return (
