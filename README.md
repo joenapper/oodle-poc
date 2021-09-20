@@ -1,13 +1,18 @@
 # Oodle Proof of Concept Site
-> [Live preview - not available yet](https://nextjs.org/)
+[Live preview - not available yet](https://nextjs.org/)
 
 ## Tech Stack
-> [Prismic - CMS](https://prismic.io/)
-> [Next JS - React Framework](https://nextjs.org/)
-> [Styled Components - Styling](https://https://styled-components.com/.org/)
-> [Storybook - UI Library](https://storybook.js.org/)
-> [Jest - Testing Library](https://jestjs.io/)
-> [Vercel - Hosting](https://vercel.com/)
+[Prismic - CMS](https://prismic.io/)
+
+[Next JS - React Framework](https://nextjs.org/)
+
+[Styled Components - Styling](https://https://styled-components.com/.org/)
+
+[Storybook - UI Library](https://storybook.js.org/)
+
+[Jest - Testing Library](https://jestjs.io/)
+
+[Vercel - Hosting](https://vercel.com/)
 
 ## Setup
 First, install dependencies:
