@@ -1,8 +1,20 @@
 import Head from "next/head";
-import Header from "./Header"
-import Footer from "./Footer"
+import Header from "./Header";
+import Footer from "./Footer";
 
-export default function Layout({ title, keywords, description, children }) {
+interface Props {
+  title?: string;
+  keywords?: string;
+  description?: string;
+  children: React.ReactNode;
+}
+
+const Layout: React.FC<Props> = ({
+  title,
+  keywords,
+  description,
+  children,
+}) => {
   return (
     <div>
       <Head>
@@ -13,7 +25,7 @@ export default function Layout({ title, keywords, description, children }) {
       <Header>Header to be continued..</Header>
 
       <main>{children}</main>
-      
+
       <Footer>
         <p>
           Proudly published with &nbsp;
@@ -40,10 +52,12 @@ export default function Layout({ title, keywords, description, children }) {
       </Footer>
     </div>
   );
-}
+};
 
 Layout.defaultProps = {
   title: "Oodle | Proof of concept",
   description: "Oodle proof of concept",
   keywords: "oodle, web dev, design, ux, ui",
 };
+
+export default Layout;

@@ -1,17 +1,13 @@
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 import styled from "styled-components";
 
-Footer.propTypes = {
-  children: PropTypes.node
-}
+const Footer: React.FC = ({ children = null }) => {
+  return <StyledFooter>{children}</StyledFooter>;
+};
 
-export default function Footer({ children = null }) {
-  return (
-    <StyledFooter>
-      {children}
-    </StyledFooter>
-  )
-}
+Footer.propTypes = {
+  children: PropTypes.node,
+};
 
 const StyledFooter = styled.footer`
   max-width: 700px;
@@ -37,3 +33,5 @@ const StyledFooter = styled.footer`
     margin-top: 10px;
   }
 `;
+
+export default Footer;

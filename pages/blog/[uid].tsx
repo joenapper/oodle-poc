@@ -1,9 +1,9 @@
 import Head from "next/head";
 import { RichText } from "prismic-reactjs";
-import Layout from "@/components/Global/Layout"
+import Layout from "@/components/Global/Layout";
 import BackButton from "@/components/post/BackButton";
 import SliceZone from "@/components/post/SliceZone";
-import { queryRepeatableDocuments } from '@/utils/queries'
+import { queryRepeatableDocuments } from "@/utils/queries";
 import { Client } from "@/utils/prismicHelpers";
 
 export default function PostPage({ post }) {
@@ -28,23 +28,30 @@ export default function PostPage({ post }) {
   }
 
   return null;
-};
+}
 
-export async function getStaticProps({ params, preview = null, previewData = {} }) {
-  const { ref } = previewData
-  const post = await Client().getByUID("post", params.uid, ref ? { ref } : null) || {}
+export async function getStaticProps({
+  params,
+  preview = null,
+  previewData = {},
+}) {
+  const { ref }: any = previewData;
+  const post =
+    (await Client().getByUID("post", params.uid, ref ? { ref } : null)) || {};
   return {
     props: {
       preview,
-      post
-    }
-  }
+      post,
+    },
+  };
 }
 
 export async function getStaticPaths() {
-  const documents = await queryRepeatableDocuments((doc) => doc.type === 'post')
+  const documents = await queryRepeatableDocuments(
+    (doc) => doc.type === "post"
+  );
   return {
-    paths: documents.map(doc => `/blog/${doc.uid}`),
+    paths: documents.map((doc) => `/blog/${doc.uid}`),
     fallback: true,
-  }
+  };
 }

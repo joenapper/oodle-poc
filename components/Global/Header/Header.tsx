@@ -1,17 +1,17 @@
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 import styled from "styled-components";
 
-Header.propTypes = {
-  children: PropTypes.node
-}
-
-export default function Header({ children = null }) {
+const Header: React.FC = ({ children = null }) => {
   return (
     <StyledHeader>
       <p>{children}</p>
     </StyledHeader>
-  )
-}
+  );
+};
+
+Header.propTypes = {
+  children: PropTypes.node,
+};
 
 const StyledHeader = styled.header`
   max-width: 700px;
@@ -21,4 +21,6 @@ const StyledHeader = styled.header`
   font-size: 16px;
   font-style: italic;
   text-align: center;
-`
+`;
+
+export default Header;
