@@ -1,1 +1,1 @@
-export { default } from "./Trustpilot";
+export { default } from "./LocationSection";
