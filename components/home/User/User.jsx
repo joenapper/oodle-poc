@@ -1,15 +1,18 @@
-import { RichText } from 'prismic-reactjs'
+import { RichText } from "prismic-reactjs";
 import styled from "styled-components";
 
 const User = ({ image, headline, description }) => {
   return (
     <UserContainer>
-      <div className="blog-avatar" style={{ backgroundImage: `url(${image.url})` }} />
+      <div
+        className="blog-avatar"
+        style={{ backgroundImage: `url(${image.url})` }}
+      />
       <h1 className="blog-title">{RichText.asText(headline)}</h1>
       <p className="blog-description">{RichText.asText(description)}</p>
     </UserContainer>
-  )
-}
+  );
+};
 
 const UserContainer = styled.section`
   text-align: center;
@@ -34,6 +37,6 @@ const UserContainer = styled.section`
     font-family: "Lato", sans-serif;
     border-bottom: 1px solid #dadada;
   }
-`
+`;
 
-export default User
+export default User;

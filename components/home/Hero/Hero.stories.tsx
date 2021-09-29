@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import Hero from './Hero';
+import Hero from "./Hero";
 
 export default {
-  title: 'Home/Hero',
+  title: "Home/Hero",
   component: Hero,
 };
 
@@ -17,13 +17,12 @@ export const Primary = () => (
       for your <strong>ideal budget</strong>
     </h2>
   </Hero>
-)
-Primary.parameters = { controls: { hideNoControlsWarning: true } }
+);
+Primary.parameters = { controls: { hideNoControlsWarning: true } };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   children: <h2>This is a hero component</h2>,
-  buttonText: 'Button',
-  buttonLink: '/',
+  buttonText: "Button",
+  buttonLink: "/",
 };
-

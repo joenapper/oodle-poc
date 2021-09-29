@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import styled from 'styled-components'
+import Link from "next/link";
+import styled from "styled-components";
 
 const BackButton = () => (
   <Button>
@@ -7,7 +7,7 @@ const BackButton = () => (
       <a>back to list</a>
     </Link>
   </Button>
-)
+);
 
 const Button = styled.div`
   color: #9a9a9a;
@@ -31,6 +31,6 @@ const Button = styled.div`
   a:hover {
     text-decoration: underline;
   }
-`
+`;
 
-export default BackButton
+export default BackButton;

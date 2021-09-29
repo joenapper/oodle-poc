@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import Footer from './Footer';
+import Footer from "./Footer";
 
 export default {
-  title: 'Global/Footer',
+  title: "Global/Footer",
   component: Footer,
 };
 
@@ -13,19 +13,11 @@ export const Primary = () => (
   <Footer>
     <p>
       Proudly published with &nbsp;
-      <a
-        href="https://prismic.io"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href="https://prismic.io" target="_blank" rel="noopener noreferrer">
         Prismic
       </a>
       <br />
-      <a
-        href="https://prismic.io"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href="https://prismic.io" target="_blank" rel="noopener noreferrer">
         <img
           className="footer-logo"
           src="/images/logo-prismic.svg"
@@ -34,10 +26,10 @@ export const Primary = () => (
       </a>
     </p>
   </Footer>
-)
-Primary.parameters = { controls: { hideNoControlsWarning: true } }
+);
+Primary.parameters = { controls: { hideNoControlsWarning: true } };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  children: 'This is a footer',
+  children: "This is a footer",
 };

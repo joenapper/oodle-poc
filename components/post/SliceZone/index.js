@@ -1,1 +1,1 @@
-export { default } from './SliceZone'
+export { default } from "./SliceZone";

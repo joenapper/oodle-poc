@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 type Widget = {
   height: string;
@@ -18,7 +18,7 @@ const Widget = React.forwardRef<HTMLDivElement, Widget>(
       data-theme="light"
       ref={ref}
     />
-  ),
+  )
 );
 
 export default Widget;

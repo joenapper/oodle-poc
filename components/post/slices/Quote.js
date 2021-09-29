@@ -1,4 +1,4 @@
-import { RichText } from 'prismic-reactjs'
+import { RichText } from "prismic-reactjs";
 
 const Quote = ({ slice }) => (
   <div className="post-part single container">
@@ -6,6 +6,6 @@ const Quote = ({ slice }) => (
       {RichText.asText(slice.primary.quote)}
     </blockquote>
   </div>
-)
+);
 
-export default Quote
+export default Quote;

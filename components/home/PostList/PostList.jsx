@@ -1,5 +1,5 @@
-import PostItem from './PostItem'
-import styled from 'styled-components'
+import PostItem from "./PostItem";
+import styled from "styled-components";
 
 const PostList = ({ posts }) => {
   return (
@@ -8,12 +8,12 @@ const PostList = ({ posts }) => {
         <PostItem post={post} key={post.id} />
       ))}
     </Posts>
-  )
-}
+  );
+};
 
 const Posts = styled.section`
   max-width: 700px;
   margin: auto;
-`
+`;
 
-export default PostList
+export default PostList;

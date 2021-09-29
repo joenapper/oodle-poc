@@ -1,20 +1,20 @@
-import { render, screen } from "@testing-library/react"
-import Header from './Header';
+import { render, screen } from "@testing-library/react";
+import Header from "./Header";
 
 describe("header", () => {
-    it("renders a header component", () => {
-        const { container } = render(<Header />)
+  it("renders a header component", () => {
+    const { container } = render(<Header />);
 
-        const header = container.querySelector("header")
-        expect(header).toBeVisible()
-    })
-})
+    const header = container.querySelector("header");
+    expect(header).toBeVisible();
+  });
+});
 
 describe("props", () => {
-    it("renders children passed to header component", () => {
-        const { container } = render(<Header children="children" />)
+  it("renders children passed to header component", () => {
+    const { container } = render(<Header children="children" />);
 
-        const header = container.querySelector("header")
-        expect(header).toHaveTextContent("children")
-    })
-})
+    const header = container.querySelector("header");
+    expect(header).toHaveTextContent("children");
+  });
+});

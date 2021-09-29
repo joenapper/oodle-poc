@@ -1,8 +1,8 @@
-import Caption from './Caption'
+import Caption from "./Caption";
 
 const FullWidthImage = ({ slice }) => {
-  const imageUrl = slice.primary.image.url
-  const caption = slice.primary.caption
+  const imageUrl = slice.primary.image.url;
+  const caption = slice.primary.caption;
 
   return (
     <div
@@ -13,7 +13,7 @@ const FullWidthImage = ({ slice }) => {
         <Caption caption={caption} />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default FullWidthImage
+export default FullWidthImage;

@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import Header from './Header';
+import Header from "./Header";
 
 export default {
-  title: 'Global/Header',
+  title: "Global/Header",
   component: Header,
 };
 
@@ -11,5 +11,5 @@ const Template = (args) => <Header {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  children: 'Header to be continued..',
+  children: "Header to be continued..",
 };
