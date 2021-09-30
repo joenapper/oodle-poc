@@ -1,6 +1,6 @@
 import React from "react";
 
-import LocationSection from "./LocationSection";
+import LocationSection from "./";
 import ComponentHeader from "./ComponentHeader";
 
 export default {

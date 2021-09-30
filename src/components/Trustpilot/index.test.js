@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import Trustpilot from "./Trustpilot";
+import Trustpilot from "./";
 
 describe("header", () => {
   it("renders a Trustpilot component", () => {

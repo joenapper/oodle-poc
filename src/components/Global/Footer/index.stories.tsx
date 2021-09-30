@@ -1,6 +1,7 @@
 import React from "react";
 
-import Footer from "./Footer";
+import Footer from "./index";
+import prismicLogo from "../../assets/logo-prismic.svg";
 
 export default {
   title: "Global/Footer",
@@ -20,7 +21,7 @@ export const Primary = () => (
       <a href="https://prismic.io" target="_blank" rel="noopener noreferrer">
         <img
           className="footer-logo"
-          src="/images/logo-prismic.svg"
+          src={prismicLogo}
           alt="Gray Prismic logo"
         />
       </a>
