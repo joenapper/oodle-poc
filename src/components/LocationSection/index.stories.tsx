@@ -1,7 +1,7 @@
 import React from "react";
 
 import LocationSection from "./";
-import ComponentHeader from "./ComponentHeader";
+import ComponentHeader from "../ComponentHeader";
 
 export default {
   title: "About Us/LocationSection",
