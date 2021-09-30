@@ -1,5 +1,5 @@
 import { RichText } from "prismic-reactjs";
-import { linkResolver } from "prismic-configuration";
+import { linkResolver } from "../../../prismic-configuration";
 import { customLink } from "@/utils/prismicHelpers";
 
 const Text = ({ slice }) => (

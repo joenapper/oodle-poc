@@ -44,7 +44,7 @@ const Layout: React.FC<Props> = ({
           >
             <img
               className="footer-logo"
-              src="/images/logo-prismic.svg"
+              src="/logo-prismic.svg"
               alt="Gray Prismic logo"
             />
           </a>

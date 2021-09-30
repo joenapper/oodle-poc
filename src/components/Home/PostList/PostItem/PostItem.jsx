@@ -3,7 +3,7 @@ import { RichText } from "prismic-reactjs";
 import styled from "styled-components";
 import PostDate from "../PostDate";
 import FirstParagraph from "../FirstParagraph";
-import { hrefResolver, linkResolver } from "prismic-configuration";
+import { hrefResolver, linkResolver } from "../../../../prismic-configuration";
 
 const PostItem = ({ post }) => {
   const title = RichText.asText(post.data.title)

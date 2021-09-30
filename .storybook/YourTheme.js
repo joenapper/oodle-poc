@@ -1,5 +1,5 @@
 import { create } from "@storybook/theming";
-import brandImage from "../public/images/oodle.png";
+import brandImage from "../public/oodle.png";
 
 export default create({
   base: "light",

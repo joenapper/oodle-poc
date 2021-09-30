@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import LocationSection from "./LocationSection";
+import LocationSection from "./";
 
 describe("Location Section", () => {
   it("renders a LocationSection component", () => {

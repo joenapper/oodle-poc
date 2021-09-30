@@ -1,6 +1,6 @@
 import React from "react";
 
-import Trustpilot from "./Trustpilot";
+import Trustpilot from "./";
 
 export default {
   title: "Trustpilot/Widgets",

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import map from "../../public/images/map.png";
+import map from "../assets/map.png";
 
 const LocationSection: React.FC = () => {
   return (
