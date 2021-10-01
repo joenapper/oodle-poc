@@ -25,6 +25,7 @@ const Wrapper = styled.section`
   .flex {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   .flex h3 {

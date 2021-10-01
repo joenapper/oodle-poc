@@ -53,27 +53,6 @@ const Wrapper = styled.section`
     font-size: 14px;
     color: #312f43;
   }
-
-  /* @media (max-width: 768px) {
-    flex-direction: column;
-    padding: 1rem 1rem;
-
-    div {
-      width: 100%;
-    }
-
-    .asset img {
-      width: 100%;
-    }
-
-    .desk-only {
-      display: none;
-    }
-
-    .mob-only {
-      display: block;
-    }
-  } */
 `;
 
 export default CallToAction;
