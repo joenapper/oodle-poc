@@ -33,7 +33,7 @@ export const Secondary = ({
     <LocationSection
       richTextField1={richTextField1}
       richTextField2={richTextField2}
-      image={map}
+      image={image}
       imageAlt={imageAlt}
     />
   </>
@@ -45,5 +45,6 @@ Secondary.args = {
     "Our different approach has attracted oodles of customers, and as a result, we've been growing fast.",
   richTextField2:
     "From our first loan, we moved into our first office in Oxford, expanded west to Wales, up to Nottingham, headed to London and north again to Manchester.",
+  image: map,
   imageAlt: "Map",
 };
