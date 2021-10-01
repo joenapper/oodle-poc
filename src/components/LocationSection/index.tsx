@@ -1,32 +1,33 @@
+import PropTypes from "prop-types";
 import styled from "styled-components";
-import map from "../assets/map.png";
 
-const LocationSection: React.FC = () => {
+const LocationSection: React.FC = ({
+  richTextField1,
+  richTextField2,
+  image,
+  imageAlt,
+}: any) => {
   return (
     <Wrapper>
       <div>
-        <p>
-          Our different approach has attracted oodles of customers, and as a
-          result, we've been growing fast.
-        </p>
-        <p className="desk-only">
-          From our first loan, we moved into our first office in Oxford,
-          expanded west to Wales, up to Nottingham, headed to London and north
-          again to Manchester.
-        </p>
+        <p>{richTextField1}</p>
+        <p className="desk-only">{richTextField2}</p>
       </div>
       <div className="asset">
-        <img src={map} alt="Map" />
+        <img src={image} alt={imageAlt} />
       </div>
       <div className="mob-only">
-        <p>
-          From our first loan, we moved into our first office in Oxford,
-          expanded west to Wales, up to Nottingham, headed to London and north
-          again to Manchester.
-        </p>
+        <p>{richTextField2}</p>
       </div>
     </Wrapper>
   );
+};
+
+LocationSection.propTypes = {
+  richTextField1: PropTypes.string,
+  richTextField2: PropTypes.string,
+  image: PropTypes.any,
+  imageAlt: PropTypes.string,
 };
 
 const Wrapper = styled.section`
@@ -34,7 +35,7 @@ const Wrapper = styled.section`
   justify-content: space-between;
   align-items: center;
   background-color: #f8f9fd;
-  padding: 1rem;
+  padding: 1rem 10%;
 
   div {
     width: 50%;
@@ -45,9 +46,14 @@ const Wrapper = styled.section`
     color: #000;
   }
 
+  .asset {
+    display: flex;
+    justify-content: flex-end;
+  }
+
   .asset img {
-    max-height: 80vh;
-    width: 100%;
+    max-height: 70vh;
+    max-width: 100%;
     object-fit: scale-down;
   }
 
@@ -57,8 +63,13 @@ const Wrapper = styled.section`
 
   @media (max-width: 768px) {
     flex-direction: column;
+    padding: 1rem 1rem;
 
     div {
+      width: 100%;
+    }
+
+    .asset img {
       width: 100%;
     }
 

@@ -20,7 +20,7 @@ ComponentHeader.propTypes = {
 
 const Wrapper = styled.section`
   background-color: #f8f9fd;
-  padding: 1rem;
+  padding: 1rem 10%;
 
   .flex {
     display: flex;
@@ -35,6 +35,10 @@ const Wrapper = styled.section`
     width: 100%;
     height: 2px;
     background-color: #231f20;
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem 1rem;
   }
 `;
 
