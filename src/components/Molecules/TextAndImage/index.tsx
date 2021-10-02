@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const LocationSection: React.FC = ({
+const TextAndImage: React.FC = ({
   richTextField1,
   richTextField2,
   image,
@@ -23,7 +23,7 @@ const LocationSection: React.FC = ({
   );
 };
 
-LocationSection.propTypes = {
+TextAndImage.propTypes = {
   richTextField1: PropTypes.string,
   richTextField2: PropTypes.string,
   image: PropTypes.any,
@@ -34,8 +34,6 @@ const Wrapper = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f8f9fd;
-  padding: 1rem 10%;
 
   div {
     width: 50%;
@@ -83,4 +81,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default LocationSection;
+export default TextAndImage;
