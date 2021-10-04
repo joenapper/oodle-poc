@@ -22,42 +22,36 @@ export default {
       options: ["teal", "white", "navy", "pink", "orange", "purple", "grey"],
       control: { type: "radio" },
     },
+    position: {
+      options: ["left", "center", "right"],
+      control: { type: "radio" },
+    },
   },
 };
 
 const Template = (args) => <Button {...args} />;
 
-export const Teal = Template.bind({});
-Teal.args = {
+export const Primary = Template.bind({});
+Primary.args = {
+  text: "Change my colour and position in the controls",
   theme: "teal",
+  position: "left",
 };
 
-export const White = Template.bind({});
-White.args = {
-  theme: "white",
+export const LeftAligned = Template.bind({});
+LeftAligned.args = {
+  theme: "teal",
+  position: "left",
 };
 
-export const Navy = Template.bind({});
-Navy.args = {
-  theme: "navy",
+export const CenterAligned = Template.bind({});
+CenterAligned.args = {
+  theme: "teal",
+  position: "center",
 };
 
-export const Pink = Template.bind({});
-Pink.args = {
-  theme: "pink",
-};
-
-export const Orange = Template.bind({});
-Orange.args = {
-  theme: "orange",
-};
-
-export const Purple = Template.bind({});
-Purple.args = {
-  theme: "purple",
-};
-
-export const Grey = Template.bind({});
-Grey.args = {
-  theme: "grey",
+export const RightAligned = Template.bind({});
+RightAligned.args = {
+  theme: "teal",
+  position: "right",
 };
