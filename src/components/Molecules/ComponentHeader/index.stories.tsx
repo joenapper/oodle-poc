@@ -4,7 +4,7 @@ import ComponentHeader from "./";
 import Container from "../../Grid/Container";
 
 export default {
-  title: "Atoms/Component Header",
+  title: "Molecules/Component Header",
   component: ComponentHeader,
 };
 

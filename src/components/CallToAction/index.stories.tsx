@@ -1,7 +1,7 @@
 import React from "react";
 
 import CallToAction from "./";
-import ComponentHeader from "../Atoms/ComponentHeader";
+import ComponentHeader from "../Molecules/ComponentHeader";
 
 export default {
   title: "About Us/CallToAction",

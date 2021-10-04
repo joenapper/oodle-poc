@@ -2,7 +2,7 @@ import React from "react";
 
 import TextAndImage from "./";
 import Container from "../../Grid/Container";
-import ComponentHeader from "../../Atoms/ComponentHeader";
+import ComponentHeader from "../ComponentHeader";
 import map from "../../assets/map.png";
 
 export default {
