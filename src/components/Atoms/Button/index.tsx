@@ -69,7 +69,6 @@ const Wrapper = styled.div`
     border-radius: 16px;
     font-size: 14px;
     display: inline-block;
-    text-decoration: none;
     color: #312f43;
   }
 `;

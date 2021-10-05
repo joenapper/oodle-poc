@@ -19,6 +19,18 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: "GT-Walsheim", sans-serif;
   }
+
+  a {
+    text-decoration: none;
+  }
+
+  p {
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 `;
 
 export default GlobalStyles;
