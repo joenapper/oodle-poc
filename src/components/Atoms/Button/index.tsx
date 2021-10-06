@@ -2,12 +2,19 @@ import Link from "next/link";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const Button: React.FC = ({
+interface IButtonProps {
+  href: string;
+  text: string;
+  theme: string;
+  position: string;
+}
+
+const Button: React.FC<IButtonProps> = ({
   href = "/",
   text,
   theme = "teal",
   position = "left",
-}: any) => {
+}) => {
   const themeColours = {
     teal: "#0ad2a0",
     white: "#FFFFFF",

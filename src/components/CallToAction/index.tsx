@@ -2,13 +2,21 @@ import Link from "next/link";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const CallToAction: React.FC = ({
+interface ICallToActionProps {
+  image: any;
+  imageAlt: string;
+  content: string;
+  buttonLink: string;
+  buttonText: string;
+}
+
+const CallToAction: React.FC<ICallToActionProps> = ({
   image,
   imageAlt,
   content,
   buttonLink = "/",
   buttonText,
-}: any) => {
+}) => {
   return (
     <Wrapper>
       <div className="asset">

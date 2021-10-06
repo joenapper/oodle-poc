@@ -1,7 +1,19 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const WhoWeAreCard: React.FC = ({ img, imgAlt, title, text }: any) => {
+interface IWhoWeAreCardProps {
+  img: any;
+  imgAlt: string;
+  title: string;
+  text: string;
+}
+
+const WhoWeAreCard: React.FC<IWhoWeAreCardProps> = ({
+  img,
+  imgAlt,
+  title,
+  text,
+}) => {
   return (
     <Wrapper>
       <div className="img-wrapper">

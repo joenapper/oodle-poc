@@ -1,7 +1,11 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const Footer: React.FC = ({ children = null }) => {
+interface IFooterProps {
+  children: React.ReactNode;
+}
+
+const Footer: React.FC<IFooterProps> = ({ children = null }) => {
   return <StyledFooter>{children}</StyledFooter>;
 };
 

@@ -1,11 +1,17 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const Container: React.FC = ({
+interface IContainerProps {
+  children: React.ReactNode;
+  backgroundColour: string;
+  textColour: string;
+}
+
+const Container: React.FC<IContainerProps> = ({
   children = null,
   backgroundColour,
   textColour,
-}: any) => {
+}) => {
   return (
     <section style={{ backgroundColor: backgroundColour }}>
       <Wrapper style={{ color: textColour }}>{children}</Wrapper>

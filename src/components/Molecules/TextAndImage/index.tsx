@@ -1,12 +1,19 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const TextAndImage: React.FC = ({
+interface ITextAndImageProps {
+  richTextField1: string;
+  richTextField2: string;
+  image: any;
+  imageAlt: string;
+}
+
+const TextAndImage: React.FC<ITextAndImageProps> = ({
   richTextField1,
   richTextField2,
   image,
   imageAlt,
-}: any) => {
+}) => {
   return (
     <Wrapper>
       <div>

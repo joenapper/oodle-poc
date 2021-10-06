@@ -1,7 +1,17 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const ComponentHeader: React.FC = ({ title, number, colour }: any) => {
+interface IComponentHeaderProps {
+  title: string;
+  number: string;
+  colour: string;
+}
+
+const ComponentHeader: React.FC<IComponentHeaderProps> = ({
+  title,
+  number,
+  colour,
+}) => {
   return (
     <Wrapper>
       <div className="flex">

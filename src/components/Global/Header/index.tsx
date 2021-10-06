@@ -1,7 +1,11 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const Header: React.FC = ({ children = null }) => {
+interface IHeaderProps {
+  children: React.ReactNode;
+}
+
+const Header: React.FC<IHeaderProps> = ({ children = null }) => {
   return (
     <StyledHeader>
       <p>{children}</p>

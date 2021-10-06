@@ -2,7 +2,12 @@ import PropTypes from "prop-types";
 import Container from "../../Grid/Container";
 import styled from "styled-components";
 
-const Hero: React.FC = ({ title, text }: any) => {
+interface IHeroProps {
+  title: string;
+  text: string;
+}
+
+const Hero: React.FC<IHeroProps> = ({ title, text }) => {
   return (
     <Container backgroundColour="#312F43" textColour="#FFFFFF">
       <Wrapper>
