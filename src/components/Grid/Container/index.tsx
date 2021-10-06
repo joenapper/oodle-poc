@@ -7,9 +7,9 @@ const Container: React.FC = ({
   textColour,
 }: any) => {
   return (
-    <Wrapper style={{ backgroundColor: backgroundColour, color: textColour }}>
-      {children}
-    </Wrapper>
+    <section style={{ backgroundColor: backgroundColour }}>
+      <Wrapper style={{ color: textColour }}>{children}</Wrapper>
+    </section>
   );
 };
 
@@ -19,7 +19,7 @@ Container.propTypes = {
   textColour: PropTypes.string,
 };
 
-const Wrapper = styled.section`
+const Wrapper = styled.div`
   padding: 4rem;
   max-width: 1000px;
   margin: auto;
